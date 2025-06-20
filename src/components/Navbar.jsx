@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className='w-full container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 md:h-20 h-16'>
                 {/* Logo */}
                 <Link to="/" className='flex items-center gap-1 cursor-pointer'>
-                    <img src='/src/img/logos.png' alt='Logo' className='h-8 w-8' />
+                    <img src='/public/images/logos.png' alt='Logo' className='h-8 w-8' />
                     <span className='text-xl font-semibold text-gray-800'>Kajian Genggam</span>
                 </Link>
 

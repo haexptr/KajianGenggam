@@ -34,7 +34,7 @@ const Hero = () => {
         
         {/* Islamic Pattern Overlay */}
         <img 
-          src="/src/img/islamic-pattern.png" 
+          src="/public/images/islamic-pattern.png" 
           alt="Background Pattern" 
           className="absolute inset-0 w-full h-full object-cover opacity-3 scale-110"
           onError={(e) => e.target.style.display = 'none'}

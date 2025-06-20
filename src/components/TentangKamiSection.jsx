@@ -34,7 +34,7 @@ const TentangKamiSection = () => {
         
         {/* Pattern Overlay (untuk gambar pattern nanti) */}
         <img 
-          src="/src/img/islamic-pattern.png" 
+          src="/public/images/islamic-pattern.png" 
           alt="Background Pattern" 
           className="absolute inset-0 w-full h-full object-cover opacity-3 scale-110"
           onError={(e) => e.target.style.display = 'none'}
@@ -107,7 +107,7 @@ const TentangKamiSection = () => {
             <div className="relative transform hover:scale-105 transition-transform duration-500 -mr-50 -mt-2.5">
               <div className="relative overflow-hidden rounded-3xl shadow-xl bg-white p-3">
                 <img 
-                  src="/src/img/women.png" 
+                  src="/public/images/women.png" 
                   alt="Woman in hijab studying" 
                   className="w-35 h-35 md:w-40 md:h-40 object-cover rounded-xl"
                   onError={(e) => {
@@ -129,7 +129,7 @@ const TentangKamiSection = () => {
             }`}>
               <div className="relative overflow-hidden rounded-2xl shadow-lg bg-white p-2">
                 <img 
-                  src="/src/img/mosque.jpg" 
+                  src="/public/images/mosque.jpg" 
                   alt="Beautiful mosque" 
                   className="w-35 h-35 md:w-40 md:h-40 object-cover rounded-xl"
                   onError={(e) => {
