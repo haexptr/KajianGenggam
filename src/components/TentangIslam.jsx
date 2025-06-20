@@ -34,7 +34,7 @@ const TentangIslam = () => {
         
         {/* Islamic Pattern Overlay */}
         <img 
-          src="/public/images/islamic-pattern.png" 
+          src="/images/islamic-pattern.png" 
           alt="Background Pattern" 
           className="absolute inset-0 w-full h-full object-cover opacity-3 scale-110"
           onError={(e) => e.target.style.display = 'none'}
@@ -54,7 +54,7 @@ const TentangIslam = () => {
             <div className="relative transform hover:scale-105 transition-transform duration-500 -mr-50 -mt-2.5">
               <div className="relative overflow-hidden rounded-3xl shadow-xl bg-white p-3">
                 <img 
-                  src="/public/images/Al-Qur'an.jpg" 
+                  src="/images/Al-Qur'an.jpg" 
                   alt="Al-Qur'an" 
                   className="w-35 h-35 md:w-40 md:h-40 object-cover rounded-xl"
                   onError={(e) => {
@@ -77,7 +77,7 @@ const TentangIslam = () => {
             }`}>
               <div className="relative overflow-hidden rounded-2xl shadow-lg bg-white p-2">
                 <img 
-                  src="/public/images/masjid.jpg" 
+                  src="/images/masjid.jpg" 
                   alt="Beautiful mosque" 
                   className="w-35 h-35 md:w-40 md:h-40 object-cover rounded-xl"
                   onError={(e) => {
