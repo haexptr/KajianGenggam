@@ -20,13 +20,13 @@ const TentangKami = () => {
 const teamMembers = [
   {
     name: "TRI WAHYUDI HA EX SAPUTRA",
-    role: "Frontend Developer",
+    role: "Full Stack Developer",
     description: "Menginisiasi dan membangun platform dari sisi frontend dan backend, serta memastikan keberlangsungan teknis dan visi dakwah digital.",
     image: "https://images.unsplash.com/photo-1720722023459-5f2a8c8815af?q=300&h=300&fit=crop&crop=face"
   },
   {
     name: "HABIB FIKRI NURSIFA ALI",
-    role: "FullStack Developer",
+    role: "Full Stack Developer",
     description: "Mendesain antarmuka yang menarik secara visual dan konsisten dengan identitas brand untuk meningkatkan kenyamanan pengguna.",
     image: "https://images.unsplash.com/photo-1720722023459-5f2a8c8815af?q=300&h=300&fit=crop&crop=face"
   },
@@ -34,12 +34,6 @@ const teamMembers = [
     name: "SUKMA DWI NUR INSANI",
     role: "UX Researcher",
     description: "Melakukan riset kebutuhan pengguna dan mengembangkan solusi berbasis pengalaman nyata demi interaksi yang optimal.",
-    image: "https://images.unsplash.com/photo-1720722023459-5f2a8c8815af?q=300&h=300&fit=crop&crop=face"
-  },
-  {
-    name: "MOCHAMMAD ABDULLAH FAQIH",
-    role: "Content Strategist",
-    description: "Merancang strategi konten islami yang relevan dan berkualitas serta mengatur penyajian materi dakwah secara terstruktur.",
     image: "https://images.unsplash.com/photo-1720722023459-5f2a8c8815af?q=300&h=300&fit=crop&crop=face"
   },
   {
