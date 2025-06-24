@@ -83,7 +83,7 @@ const Hero = () => {
           {/* CTA Button */}
           <div className="pt-4">
             <a 
-              href="/Kajian" 
+              href="/kajian" 
               className="inline-flex items-center bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-emerald-700 hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl group"
             >
               <span className="mr-3 text-xl">🕌</span>
