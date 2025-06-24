@@ -75,35 +75,26 @@ const Hero = () => {
               Platform digital yang menyajikan <span className="font-semibold text-emerald-700">ceramah dan kajian Islam</span> berkualitas untuk menemani perjalanan hijrahmu.
             </p>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-              Dapatkan akses ke ribuan konten islami dari
-              <span className="font-semibold text-teal-700"> ustadz terpercaya</span>,
+              Dapatkan akses ke ribuan konten islami dari 
+              <span className="font-semibold text-teal-700"> ustadz terpercaya</span>, 
               kapan saja dan di mana saja dalam genggamanmu.
             </p>
           </div>
 
           {/* CTA Button */}
           <div className="pt-4">
-            <Link
-              to="/kajian"
+            <Link 
+              to="/kajian" 
               className="inline-flex items-center bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-emerald-700 hover:scale-105 transform transition-all duration-300 shadow-lg hover:shadow-xl group"
             >
-              <span className="mr-3 text-xl">🕌</span>
+              <span className="mr-3 text-xl" role="img" aria-label="mosque">🕌</span>
               Mulai Belajar
-              <svg
-                className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
+              <svg className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
-          </div>}
+          </div>
+        </div>
         <div className={`w-full md:w-1/2 flex justify-center md:justify-end transition-all duration-1000 delay-300 ${
           isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
         }`}>
