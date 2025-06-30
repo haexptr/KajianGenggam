@@ -24,23 +24,37 @@ const [views, setViews] = useState(0);
 const [isAnimating, setIsAnimating] = useState(false);
 
 useEffect(() => {
-    // Initialize or get existing views count
-    if (!window.pageViewCounter) {
-      window.pageViewCounter = 0;
+    // Get existing views from localStorage atau inisialisasi dengan 0
+    let currentViews = 0;
+    
+    try {
+      const storedViews = localStorage.getItem('kajianGenggam_pageViews');
+      currentViews = storedViews ? parseInt(storedViews, 10) : 0;
+    } catch (error) {
+      console.log('localStorage not available, using session storage');
+      // Fallback ke window object jika localStorage error
+      currentViews = window.pageViewCounter || 0;
     }
     
     // Increment views setiap kali halaman dikunjungi/refresh
-    window.pageViewCounter += 1;
+    currentViews += 1;
+    
+    // Save ke localStorage dan window object
+    try {
+      localStorage.setItem('kajianGenggam_pageViews', currentViews.toString());
+    } catch (error) {
+      window.pageViewCounter = currentViews;
+    }
     
     // Animate the counter
     setIsAnimating(true);
     const timer = setTimeout(() => {
-      setViews(window.pageViewCounter);
+      setViews(currentViews);
       setIsAnimating(false);
     }, 500);
 
     // Debug log untuk memastikan counter berjalan
-    console.log('Page visits:', window.pageViewCounter);
+    console.log('Page visits:', currentViews);
 
     return () => {
       clearTimeout(timer);
