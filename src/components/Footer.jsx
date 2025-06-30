@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Custom SVG Icons
 const Instagram = ({ size = 24, className = "" }) => (
@@ -13,7 +13,50 @@ const Youtube = ({ size = 24, className = "" }) => (
 </svg>
 );
 
+const Eye = ({ size = 16, className = "" }) => (
+<svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+</svg>
+);
+
 const Footer = () => {
+const [views, setViews] = useState(0);
+const [isAnimating, setIsAnimating] = useState(false);
+
+useEffect(() => {
+    // Initialize or get existing views count
+    if (!window.pageViewCounter) {
+      window.pageViewCounter = 0;
+    }
+    
+    // Increment views setiap kali halaman dikunjungi/refresh
+    window.pageViewCounter += 1;
+    
+    // Animate the counter
+    setIsAnimating(true);
+    const timer = setTimeout(() => {
+      setViews(window.pageViewCounter);
+      setIsAnimating(false);
+    }, 500);
+
+    // Debug log untuk memastikan counter berjalan
+    console.log('Page visits:', window.pageViewCounter);
+
+    return () => {
+      clearTimeout(timer);
+    };
+}, []); // Empty dependency array = runs once on mount (page visit/refresh)
+
+const formatViews = (num) => {
+    if (num >= 1000000) {
+      return (num / 1000000).toFixed(1) + 'M';
+    }
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1) + 'K';
+    }
+    return num.toLocaleString();
+};
+
 return (
     <footer className='relative text-white py-16 md:py-20 overflow-hidden' style={{backgroundColor: '#1C6758'}}>
       {/* Decorative Background Elements */}
@@ -96,6 +139,31 @@ return (
             </div>
         </div>
 
+        </div>
+
+        {/* Views Counter */}
+        <div className="flex justify-center mb-8">
+          <div className="relative">
+            <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-2xl px-6 py-3 border border-white/20">
+              <Eye size={18} className="text-white/70" />
+              <div className="flex items-center space-x-2">
+                <span className="text-sm text-white/70 font-medium">Total Kunjungan:</span>
+                <div className={`flex items-center transition-all duration-300 ${isAnimating ? 'scale-110 text-green-300' : 'text-white'}`}>
+                  <span className="text-lg font-bold tabular-nums">
+                    {formatViews(views)}
+                  </span>
+                  {isAnimating && (
+                    <div className="ml-1 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+                  )}
+                </div>
+              </div>
+            </div>
+            
+            {/* Glow effect when animating */}
+            {isAnimating && (
+              <div className="absolute inset-0 bg-white/20 rounded-2xl blur-md animate-pulse"></div>
+            )}
+          </div>
         </div>
 
         {/* Divider */}
